@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&display=swap')
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--theme-orange: #f26226;
+	--theme-dark: #303236;
+	--theme-blue: #2e62af;
+}
+
+::selection {
+	background: var(--theme-orange);
+	color: #fff;
+	/* Webkit/Blink Browsers */
+}
+
+::-moz-selection {
+	background: var(--theme-orange);
+	color: #fff;
+	/* Gecko Browsers */
+}
+
+/* General Properties */
+html, body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	font-family: "Cera Pro", "HelveticaNeue", "Helvetica Neue",
+	 "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman",
+	  "TeXGyreHerosRegular", "Helvetica", "Tahoma", "Geneva", "Arial",
+	   sans-serif;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.btn-orange {
+	background: var(--theme-orange);
+	color: #fff;
+	border: 1px solid var(--theme-orange);
+	border-radius: 5px;
+}
+
+.btn-orange:hover {
+	background-color: #d04911;
+	color: #fff;
+}
+
+.btn-blue {
+	background-color: var(--theme-blue);
+	color: #fff;
+	border: 1px solid var(--theme-blue);
+}
+
+.btn-blue:hover {
+	background-color: #0f346c;
+	color: #fff;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 5rem;
+}
+
+/* For Mobiles */
+[class*="col-"] {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+/* //////////////// */
+
+
+/* Header Section */
+
+.navbar {
+	display: flex;
+	align-items: center;
+	padding: 0 5rem;
+	z-index: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	border-bottom: 1px solid #eceef2;
+}
+
+.menu-icon{
+	display: none;
+}
+
+.navbar-logo img {
+	margin: auto;
+	width: 80px;
+}
+
+.navbar-menu {
+	display: flex;
+	align-items: center;
+}
+
+.login-signup {
+	display: flex;
+	width: 50%;
+	justify-content: flex-end;
+}
+
+.login-signup a {
+	margin-right: 0.5rem;
+}
+
+.nav-link {
+	font-size: 14px;
+	color: #6a6d75;
+	text-decoration: none;
+	margin-right: 2rem;
+}
+
+.signup-btn {
+	font-size: 14px;
+	padding: 10px;
+}
+
+.welcome__section {
+	margin-top: 3.5rem;
+}
+
+.background-video {
+	position: relative;
+}
+
+
+.background-video video{
+	width: 100%;
+	margin: 0;
+}
+
+/* Welcome Section */
+.welcome__section .top__rated-text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	color: #fff;
+}
+
+.welcome__section h1 {
+	font-weight: 600;
+	font-size: 46px;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.welcome__section p {
+	text-align: center;
+}
+
+.welcome__section button {
+	color: #fff;
+	font-size: 13px;
+	padding: 20px 50px;
+}
+
+.get__started {
+	display: none;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.get__started-btn {
+	width: 250px;
+	padding: 15px 50px;
+	border-radius: 50px;
+	font-size: 16px;
+}
+
+/* What We Do Section */
+
+.what_we_do {
+	margin-top: 4.7rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.what_we_do [class*="col-"] {
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+
+.what_we_do img {
+	display: block;
+	margin: auto;
+}
+
+.what_we_do h3 {
+	font-size: 40px;
+	font-weight: 800;
+	margin-top: 5rem;
+	color: var(--theme-dark);
+	margin-bottom: 1rem;
+}
+
+.what_we_do p {
+	font-size: 23px;
+	color: #6a6d75;
+	line-height: 1.6;
+}
+
+/* /////////////// */
+
+
+/* Blue apron box styling*/
+
+.inside_apron-box {
+	margin: 4rem 5rem;
+}
+
+.inside__apron-wrapper {
+	background-image: url('../img/aprobox-wrapper.jpg');
+	background-size: cover;
+	background-position: center;
+	min-height: 500px;
+	padding: 3rem 10rem;
+	text-align: center;
+}
+
+.inside__apron-wrapper .card {
+	background-color: #fff;
+	padding: 2rem 0;
+}
+
+.inside__apron-wrapper .card-body [class*="col-"] {
+	padding: 30px;
+}
+
+.inside__apron-wrapper h3 {
+	color: var(--theme-dark);
+	font-size: 20px;
+	font-weight: 700;
+	margin: 1.5rem 0;
+}
+
+.inside__apron-wrapper img {
+	display: block;
+	height: 50px;
+	margin: 1.6rem auto 1.6rem auto;
+}
+
+.inside__apron-wrapper h4 {
+	color: var(--theme-dark);
+	font-size: 18px;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.inside__apron-wrapper p {
+	color: #6a6d75;
+	font-size: 18px;
+}
+
+.inside__apron-wrapper .card button {
+	padding: 15px 50px;
+	border-radius: 25px;
+}
+
+/* /////////////// */
+
+/* Start Serving */
+
+.start_serving {
+	margin-top: 4.7rem;
+	text-align: center;
+}
+
+.start_serving img {
+	width: 220px
+}
+
+.start_serving h3 {
+	font-size: 26px;
+	font-weight: 700;
+	margin-top: 1.3rem;
+	color: var(--theme-dark);
+	margin-bottom: 1rem;
+}
+
+.start_serving p {
+	font-size: 18px;
+	color: #6a6d75;
+	line-height: 1.6;
+}
+
+.start_serving button {
+	padding: 15px 50px;
+	border-radius: 25px;
+}
+
+/* ///////////////// */
+
+/* Contact Section */
+
+.contact__section {
+	background-color: #fafbfc;
+	margin-top: 4rem;
+	border-top: 1px solid #eceef2;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+.contact__section img {
+	height: 30px;
+	opacity: 0.3;
+	margin-right: 1rem;
+}
+
+.input-group {
+	display: flex;
+	justify-content: center;
+}
+
+.contact__section input {
+	height: 30px;
+	width: 50%;
+	padding-left: 10px;
+}
+
+.contact__section button {
+	padding-left: 15px;
+	padding-right: 15px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.contact__section h5 {
+	font-size: 14px;
+	color: #303236;
+}
+
+.contact__section p {
+	font-size: 14px;
+	color: #6a6d75;
+}
+
+.contact__section a {
+	color: #303236;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.add-border {
+	border-left: 1px solid #e4e6eb;
+	border-right: 1px solid #e4e6eb;
+}
+
+/* //////////////// */
+
+/* Footer Section */
+
+.footer__section {
+	background-color: #0f346c;
+	color: #fff;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	line-height: 2rem;
+}
+
+.footer__section [class*="col-"] {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer__section a {
+	color: #a1bce6;
+	font-size: 14px;
+	text-decoration: none;
+}
+
+.footer__section p {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 15px;
+}
+
+.footer__section img {
+	width: 125px;
+	border-radius: 3px;
+}
+
+.float-right {
+	text-align: right;
+}
+
+.caption {
+	margin-top: 1rem;
+}
+/* /////////////// */
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+	.col-1 {
+		width: 8.33%;
+	}
+	.col-2 {
+		width: 16.66%;
+	}
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33.33%;
+	}
+	.col-5 {
+		width: 41.66%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-7 {
+		width: 58.33%;
+	}
+	.col-8 {
+		width: 66.66%;
+	}
+	.col-9 {
+		width: 75%;
+	}
+	.col-10 {
+		width: 83.33%;
+	}
+	.col-11 {
+		width: 91.66%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 992px) {
+	.row {
+		padding: 0 1rem;
+	}
+	.navbar {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.nav-link {
+		font-size: 12px;
+		margin-right: 1.5rem;
+	}
+	.login-signup {
+		width: 30%;
+	}
+
+	/* What we do section */
+	.what_we_do .row {
+		padding: 0 4rem;
+	}
+	.what_we_do [class*="col-"] {
+		padding: 0;
+	}
+	.what_we_do h3 {
+		font-size: 28px;
+		font-weight: 700;
+	}
+	.what_we_do p {
+		font-size: 18px;
+	}
+	.what_we_do img {
+		width: 200px;
+	}
+
+	/* Inside Apron Box Section */
+	.inside_apron-box {
+		margin: 4rem 1rem;
+	}
+	.inside__apron-wrapper {
+		padding: 3rem 4rem;
+	}
+
+	/* Contact Section */
+	.contact__section [class*="col-"] {
+		width: 100%;
+	}
+	.follow__us-header {
+		display: none;
+	}
+	.follow__us {
+		order: 2;
+		display: flex;
+		justify-content: space-around;
+		margin-top: 1.5rem;
+	}
+	.what__cookin {
+		order: 1;
+		border-bottom: 1px solid #e4e6eb;
+		border-left: none;
+		border-right: none;
+	}
+	.what__cookin input {
+		width: 50%;
+	}
+	.from__blog {
+		display: none;
+	}
+	.footer__section {
+		background-color: #fafbfc;
+		padding: 1rem 1.5rem;
+	}
+	.footer__section [class*="col-"] {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.footer__section a {
+		font-size: 12px;
+		color: #d3d5db;
+		margin-right: 1rem;
+	}
+	.footer__section p {
+		color: #d3d5db;
+		font-size: 12px;
+	}
+	.customer__support {
+		display: flex;
+		flex-direction: column !important;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+	.customer__support a {
+		margin: 0;
+	}
+	.caption p {
+		font-size: 14px;
+		color: #6a6d75;
+	}
+	.caption a {
+		color: #245091;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.navbar-menu {
+		display: none;
+	}
+	.navbar-logo img {
+		margin-top: 0.5rem;
+		width: 65px;
+	}
+	.login-signup {
+		display: none;
+	}
+	.menu-icon {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	.toggle-button {
+		display: flex;
+	}
+	.row {
+		padding: 0;
+	}
+	.welcome__section {
+		margin-top: 2.5rem;
+	}
+	.background-video {
+		background-image: url(https://media.blueapron.com/home_page/Splash/20171106_HomepageUpdate_topimage_2_Mobile.jpg?quality=75) !important;
+		background-size: cover;
+		background-position: top;
+		height: 280px;	
+	}
+	.background-video video{
+		display: none;
+	}
+	.welcome__section .top__rated-text {
+		bottom: auto;
+	}
+	.welcome__section .top__rated-text button {
+		display: none;
+	}
+	.welcome__section h1 {
+		font-weight: 600;
+		font-size: 24px;
+	}
+	.get__started {
+		display: flex;
+		justify-content: center;
+	}
+	.get__started-btn {
+		width: 80%;
+	}
+
+	/* What we do section */
+	.what_we_do {
+		margin-top: 1.5rem;
+	}
+	.what_we_do .row {
+		padding: 0 1rem;
+	}
+	.what_we_do [class*="col-"] {
+		padding: 0 2rem;
+	}
+	.what_we_do h3 {
+		text-align: center;
+		margin-top: 1rem;
+		font-size: 28px;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+	.what_we_do p {
+		text-align: center;
+		font-size: 18px;
+	}
+	.what_we_do img {
+		width: 200px;
+	}
+	.unpack__box-img {
+		order: 1;
+	}
+	.unpack__box-text {
+		order: 2;
+	}
+
+	/* Inside Apron Section */
+	.inside_apron-box {
+		margin: 2rem 0;
+	}
+	.inside__apron-wrapper {
+		padding: 0;
+	}
+	.inside__apron-wrapper .card {
+		background-color: #fafbfc;
+		padding: 1rem;
+	}
+	.inside__apron-wrapper .card-body [class*="col-"] {
+		padding: 0;
+	}
+	.inside__apron-wrapper h3 {
+		font-size: 19px;
+	}
+	.choose__plan-btn {
+		display: none;
+	}
+
+	/* Start Serving Section */
+	.start_serving {
+		padding: 0 1.5rem;
+	}
+}
